@@ -1,0 +1,29 @@
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #fff;
+    background: #333;
+}
+
+a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.splitlayout.open-right .page-right, .splitlayout.open-left .page-left {
+position: fixed;
+overflow: scroll;
+height: 100%;
+}
+.page-inner {
+height: 100%;
+}
+
+
+.open-left .side, .open-right .side {
+position: fixed;
+}
