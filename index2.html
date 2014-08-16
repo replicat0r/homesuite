@@ -8,7 +8,8 @@
     <title>HomeSuite</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta name="author" content="Codrops" />
+    <meta name="author" content="" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
@@ -22,26 +23,31 @@
 
     <script src="js/2modernizr.custom.js"></script>
     <style>
-        .new
-        {
+        .othercontent {
             display: block;
             height: 300px;
             width: 100%;
-            background: red;
         }
         header {
-            background: gainsboro;
+            background: white;
             display: block;
-            height: 80px;
+            height: 70px;
             width: 100%;
             top: 0;
             position: fixed;
             z-index: 300;
+            -moz-box-shadow: 0px 1px 5px #ddd;
+            -webkit-box-shadow: 0px 1px 5px #ddd;
+            box-shadow: 0px 1px 5px #ddd;
         }
         header ul li {
             float: left;
             list-style: none;
             display: inline-block;
+        }
+        ul li a {
+            padding: 10px;
+            line-height: 70px;
         }
         body {
             overflow-y: visible;
@@ -49,21 +55,63 @@
         .invis {
             display: none!important;
         }
+        .active {
+            background: green;
+        }
+        .b1 .benefit:first-child {
+            border-right: 1px solid whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+        }
+        .b2 .benefit:last-child {
+            border-left: 1px solid whitesmoke;
+            border-top: 1px solid whitesmoke;
+        }
+        .benefit {
+            height: 200px;
+            padding: 10px;
+        }
+        footer {
+            height: 150px;
+            background: grey;
+        }
+        footer .rights {
+            border-top: 1px solid gainsboro;
+            position: relative;
+            display: block;
+        }
+        input[type="checkbox"] {
+            visibility: hidden;
+            height: 0;
+        }
+        .multiple input[type="checkbox"] + label {
+            border: 1px solid white;
+            width: 25%;
+            float: left;
+            padding: 30px 5px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px;
+            display: inline-block;
+        }
+        input[type="checkbox"]:checked + label {
+            color: white;
+            border: 1px solid white;
+        }
     </style>
 </head>
 
 <body>
-    <header class="magellan-fixed-top clearfix" id="header">
-        <ul class="large-6 columns right">
+    <header class=" clearfix" id="header">
+        <ul class="large-4 columns right">
 
-            <li><a href="#">Home</a>
+            <li><a class="home" href="#">Home</a>
             </li>
-            <li><a href="#">About</a>
+            <li><a class="about" href="#">About</a>
             </li>
 
-            <li><a href="#">Process</a>
+            <li><a class="process" href="#">Process</a>
             </li>
-            <li><a href="#">Contact</a>
+            <li><a class="contact" href="#">Contact</a>
             </li>
 
 
@@ -76,19 +124,20 @@
                 <div class="side side-left">
 
                     <div class="intro-content">
-                        <div class="profile">
-                            <img src="img/profile1.jpg" alt="profile1">
-                        </div>1
-                        <h5><span>Home Owners </span><span>Sign In here</span></h5>
+
+                        <div class="intro-content">
+                            <h1> Lorem Ipsum</h1>
+                            <h5>Let Us help</h5>
+                            <button>Sign Up</button>
+                        </div>
                     </div>
                     <div class="overlay"></div>
                 </div>
                 <div class="side side-right">
                     <div class="intro-content">
-                        <div class="profile">
-                            <img src="img/profile2.jpg" alt="profile2">
-                        </div>
-                        <h1><span>Service Provider </span><span>Sign In here</span></h1>
+                        <h1> Lorem Ipsum</h1>
+                        <h5>Find the Perfect Job</h5>
+                        <button>Sign Up</button>
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -113,36 +162,34 @@
                                     <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
                                 </li>
                                 <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
-                                    <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-                                        <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
-                                        <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
-                                        <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What kind of service do you provide?</label>
+                                    <div class="clearfix fs-anim-lower multiple large-90 columns">
+
+                                        <input type="checkbox" id="c1" name="cc" />
+                                        <label for="c1">Cleaning</label>
+                                        <input type="checkbox" id="c2" name="cc" />
+                                        <label for="c2">Snow Removal</label>
+                                        <input type="checkbox" id="c3" name="cc" />
+                                        <label for="c3">Handyman</label>
+                                        <input type="checkbox" id="c4" name="cc" />
+                                        <label for="c4">Landscaping</label>
+                                        <input type="checkbox" id="c5" name="cc" />
+                                        <label for="c5">Moving</label>
+                                        <input type="checkbox" id="c6" name="cc" />
+                                        <label for="c6">Junk removal</label>
+
                                     </div>
                                 </li>
-                                <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it all over">Choose a color for your website.</label>
-                                    <select class="cs-select cs-skin-boxes fs-anim-lower">
-                                        <option value="" disabled selected>Pick a color</option>
-                                        <option value="#588c75" data-class="color-588c75">#588c75</option>
-                                        <option value="#b0c47f" data-class="color-b0c47f">#b0c47f</option>
-                                        <option value="#f3e395" data-class="color-f3e395">#f3e395</option>
-                                        <option value="#f3ae73" data-class="color-f3ae73">#f3ae73</option>
-                                        <option value="#da645a" data-class="color-da645a">#da645a</option>
-                                        <option value="#79a38f" data-class="color-79a38f">#79a38f</option>
-                                        <option value="#c1d099" data-class="color-c1d099">#c1d099</option>
-                                        <option value="#f5eaaa" data-class="color-f5eaaa">#f5eaaa</option>
-                                        <option value="#f5be8f" data-class="color-f5be8f">#f5be8f</option>
 
-                                    </select>
-                                </li>
+
                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q4">Describe how you imagine your new website</label>
+                                    <label class="fs-field-label fs-anim-upper" for="q5">What's Your Service Fee?</label>
+                                    <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="100" step="5" min="10" />
+                                </li>
+
+                                <li>
+                                    <label class="fs-field-label fs-anim-upper" for="q4">Tell us a little about yourself</label>
                                     <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
-                                </li>
-                                <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q5">What's your budget?</label>
-                                    <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100" />
                                 </li>
                             </ol>
                             <!-- /fs-fields -->
@@ -160,17 +207,21 @@
                 <div class="page-inner">
                     <div class="fs-form-wrap" id="fs-form-wrap-left">
                         <div class="fs-title">
-                            <h1 class="left">Project Worksheet</h1>
+                            <h1 class="left">Sign-up with us</h1>
 
                         </div>
                         <form id="myform" class="fs-form fs-form-full" autocomplete="off">
                             <ol class="fs-fields">
                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q1"><h2>What's your name?</h2></label>
+                                    <label class="fs-field-label fs-anim-upper" for="q1">
+                                        What's your name?
+                                    </label>
                                     <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
                                 </li>
                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise..."><h2>What's your email address?</h2></label>
+                                    <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">
+                                        What's your email address?
+                                    </label>
                                     <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
                                 </li>
                                 <li data-input-trigger>
@@ -181,33 +232,36 @@
                                         <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
                                     </div>
                                 </li>
-                                <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it all over">Choose a color for your website.</label>
-                                    <select class="cs-select cs-skin-boxes fs-anim-lower">
-                                        <option value="" disabled selected>Pick a color</option>
-                                        <option value="#588c75" data-class="color-588c75">#588c75</option>
-                                        <option value="#b0c47f" data-class="color-b0c47f">#b0c47f</option>
-                                        <option value="#f3e395" data-class="color-f3e395">#f3e395</option>
-                                        <option value="#f3ae73" data-class="color-f3ae73">#f3ae73</option>
-                                        <option value="#da645a" data-class="color-da645a">#da645a</option>
-                                        <option value="#79a38f" data-class="color-79a38f">#79a38f</option>
-                                        <option value="#c1d099" data-class="color-c1d099">#c1d099</option>
-                                        <option value="#f5eaaa" data-class="color-f5eaaa">#f5eaaa</option>
-                                        <option value="#f5be8f" data-class="color-f5be8f">#f5be8f</option>
+                               <li data-input-trigger>
+                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What kind of service do you provide?</label>
+                                    <div class="clearfix fs-anim-lower multiple large-90 columns">
 
-                                    </select>
+                                        <input type="checkbox" id="c1" name="cc" />
+                                        <label for="c1">Landlord</label>
+                                        <input type="checkbox" id="c2" name="cc" />
+                                        <label for="c2">Property Manager</label>
+                                        <input type="checkbox" id="c3" name="cc" />
+                                        <label for="c3">Home Owner</label>
+                                        <input type="checkbox" id="c4" name="cc" />
+                                        <label for="c4">Realtor</label>
+
+
+                                    </div>
                                 </li>
-                                <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q4">Describe how you imagine your new website</label>
-                                    <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
-                                </li>
+
+
                                 <li>
                                     <label class="fs-field-label fs-anim-upper" for="q5">What's your budget?</label>
                                     <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100" />
                                 </li>
+
+                                 <li>
+                                    <label class="fs-field-label fs-anim-upper" for="q4">Describe how you imagine your new website</label>
+                                    <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+                                </li>
                             </ol>
                             <!-- /fs-fields -->
-                            <button class="fs-submit" type="submit">Send answers</button>
+                            <button class="fs-submit" type="submit">Send</button>
                         </form>
                         <!-- /fs-form -->
                     </div>
@@ -223,29 +277,73 @@
 
     </div>
     <!-- /container -->
-    <div class=" new">
-        about
+    <div class="about othercontent row">
+        <h1> Everything in one place</h1>
+        <div class="large-12 columns b1">
+            <div class="large-6 columns benefit">
+                <h5> PRIORITY BOOKING</h5>
+<p>Homesuite qualified professionals are available on demand for emergency situations and for regular jobs.</p>            </div>
+            <div class="large-6 columns benefit">
+                <h5>FULLY INTEGRATED</h5>
+<p>Register your income property for free and Homesuite will automatically notify your tenants when jobs are scheduled</p>
+
+            </div>
+
+        </div>
+        <div class="large-12 columns b2">
+            <div class="large-6 columns benefit">
+                <h5>UPFRONT PRICING</h5>
+<p>See what you are paying for before you book so you can increase that bottom line.</p>            </div>
+            <div class="large-6 columns benefit">
+                <h5>We are here to help</h5>
+                <p>Secure and cashless platform, 24/7 customer service, 100% money-back guarantee, FREE to sign up. </p>
+
+            </div>
+        </div>
     </div>
-    
-     <div class=" new">
-         process
+
+    <div class="process othercontent">
     </div>
-         <div class=" new">
-         contact
+    <div class="contact othercontent">
+
     </div>
+
+    <footer class="othercontent">
+        <div class="row">
+            <div class="large-12 columns">
+                <p class=" rights text-center">© 2014 HomeSuite, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/waypoints.min.js"></script>
 
     <script src="js/classie.js"></script>
     <script src="js/cbpSplitLayout.js"></script>
     <script src="js/fullscreenForm.js"></script>
     <script src="js/selectFx.js"></script>
     <script src="js/foundation.min.js"></script>
+
     <script src="js/app.js"></script>
     <script>
+        $(document).ready(function () {
+            //        $('.contact').waypoint(function() {
+            //            $('header').find('a').removeClass('active');
+            //            $('header .contact').addClass('active');
+            //            });
+            //
+            //        $('.process').waypoint(function() {
+            //            $('header').find('a').removeClass('active');
+            //            $('header .process').addClass('active');
+            //        });
+            //          $('.about').waypoint(function() {
+            //            $('header').find('a').removeClass('active');
+            //            $('header .about').addClass('active');
+            //        });
+
+        });
+
         $(document).foundation();
-
-
-       
     </script>
 </body>
 

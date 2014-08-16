@@ -1,17 +1,14 @@
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    color: #fff;
-    background: #333;
-}
+font-family: 'Open Sans', sans-serif;}
 
 a {
-	color: #ccc;
-	text-decoration: none;
+    color: #ccc;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #000;
+    color: #000;
 }
 
 .splitlayout.open-right .page-right, .splitlayout.open-left .page-left {
@@ -26,4 +23,9 @@ height: 100%;
 
 .open-left .side, .open-right .side {
 position: fixed;
+}
+
+.fs-form-wrap label:not(.multiple){
+    font-size: 2.2em;
+    font-weight: 100;
 }
