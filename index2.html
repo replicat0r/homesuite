@@ -10,6 +10,9 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
@@ -25,29 +28,7 @@
     <style>
         .othercontent {
             display: block;
-            height: 300px;
             width: 100%;
-        }
-        header {
-            background: white;
-            display: block;
-            height: 70px;
-            width: 100%;
-            top: 0;
-            position: fixed;
-            z-index: 300;
-            -moz-box-shadow: 0px 1px 5px #ddd;
-            -webkit-box-shadow: 0px 1px 5px #ddd;
-            box-shadow: 0px 1px 5px #ddd;
-        }
-        header ul li {
-            float: left;
-            list-style: none;
-            display: inline-block;
-        }
-        ul li a {
-            padding: 10px;
-            line-height: 70px;
         }
         body {
             overflow-y: visible;
@@ -67,12 +48,11 @@
             border-top: 1px solid whitesmoke;
         }
         .benefit {
-            height: 200px;
-            padding: 10px;
+            height: 150px;
+            padding: 20px;
         }
         footer {
-            height: 150px;
-            background: grey;
+            height: 100px;
         }
         footer .rights {
             border-top: 1px solid gainsboro;
@@ -97,21 +77,33 @@
             color: white;
             border: 1px solid white;
         }
+        .property h6 span {
+            background: white;
+            color: rgba(0, 168, 198, 1);
+            padding: 0 3px;
+        }
+        .about h5 {
+            text-transform: uppercase;
+        }
+        .about i {
+            font-size: 50px;
+            transform: translateY(50%);
+        }
     </style>
 </head>
 
 <body>
-    <header class=" clearfix" id="header">
-        <ul class="large-4 columns right">
+    <header class="clearfix" class="top-bar" data-topbar id="header">
+        <ul class="large-6 right medium-7 columns ">
 
-            <li><a class="home" href="#">Home</a>
+            <li><a class="home" href="#">contact</a>
             </li>
-            <li><a class="about" href="#">About</a>
+            <li><a class="about" href="#">process</a>
             </li>
 
-            <li><a class="process" href="#">Process</a>
+            <li><a class="process" href="#">about</a>
             </li>
-            <li><a class="contact" href="#">Contact</a>
+            <li><a class="contact" href="#">home</a>
             </li>
 
 
@@ -125,19 +117,24 @@
 
                     <div class="intro-content">
 
-                        <div class="intro-content">
-                            <h1> Lorem Ipsum</h1>
-                            <h5>Let Us help</h5>
+                        <div class="property">
+                            <h2>Property Owners</h2>
+                            <hr>
+                            <h6>Schedule professional handyman and service workers for your income property when you need them  <span>Anytime.Anywhere</span></h6>
+
                             <button>Sign Up</button>
                         </div>
                     </div>
                     <div class="overlay"></div>
                 </div>
                 <div class="side side-right">
-                    <div class="intro-content">
-                        <h1> Lorem Ipsum</h1>
-                        <h5>Find the Perfect Job</h5>
-                        <button>Sign Up</button>
+                    <div class="intro-content ">
+                        <div class="serviceworker">
+                            <h2>Service Workers</h2>
+                            <h5>Find the Perfect Job</h5>
+                            <button>Sign Up</button>
+
+                        </div>
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -224,26 +221,19 @@
                                     </label>
                                     <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
                                 </li>
+
                                 <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
-                                    <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-                                        <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
-                                        <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
-                                        <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
-                                    </div>
-                                </li>
-                               <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What kind of service do you provide?</label>
+                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">Which type of the role describes you the best?</label>
                                     <div class="clearfix fs-anim-lower multiple large-90 columns">
 
-                                        <input type="checkbox" id="c1" name="cc" />
-                                        <label for="c1">Landlord</label>
-                                        <input type="checkbox" id="c2" name="cc" />
-                                        <label for="c2">Property Manager</label>
-                                        <input type="checkbox" id="c3" name="cc" />
-                                        <label for="c3">Home Owner</label>
-                                        <input type="checkbox" id="c4" name="cc" />
-                                        <label for="c4">Realtor</label>
+                                        <input type="checkbox" id="customer1" name="cc" />
+                                        <label for="customer1">Landlord</label>
+                                        <input type="checkbox" id="customer2" name="cc" />
+                                        <label for="customer2">Property Manager</label>
+                                        <input type="checkbox" id="customer3" name="cc" />
+                                        <label for="customer3">Home Owner</label>
+                                        <input type="checkbox" id="customer4" name="cc" />
+                                        <label for="customer4">Realtor</label>
 
 
                                     </div>
@@ -255,8 +245,8 @@
                                     <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100" />
                                 </li>
 
-                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q4">Describe how you imagine your new website</label>
+                                <li>
+                                    <label class="fs-field-label fs-anim-upper" for="q4">Tell us about your property</label>
                                     <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
                                 </li>
                             </ol>
@@ -278,26 +268,47 @@
     </div>
     <!-- /container -->
     <div class="about othercontent row">
-        <h1> Everything in one place</h1>
+        <h3 class="text-center">On Demand Real Estate Services for the Property Manager and Landlord</h3>
+        <h6 class="text-center">HomeSuite connect you with the right specialist for your property management needs</h6>
         <div class="large-12 columns b1">
             <div class="large-6 columns benefit">
-                <h5> PRIORITY BOOKING</h5>
-<p>Homesuite qualified professionals are available on demand for emergency situations and for regular jobs.</p>            </div>
+                <i class="fa fa-clock-o large-1"></i>
+                <div class="large-10 right columns">
+                    <h5> PRIORITY BOOKING</h5>
+                    <p>Homesuite qualified professionals are available on demand for emergency situations and for regular jobs.</p>
+                </div>
+
+
+            </div>
             <div class="large-6 columns benefit">
-                <h5>FULLY INTEGRATED</h5>
-<p>Register your income property for free and Homesuite will automatically notify your tenants when jobs are scheduled</p>
+                <i class="fa fa-sitemap fa-rotate-90"></i>
+                <div class="large-10 right columns">
+
+                    <h5>FULLY INTEGRATED</h5>
+
+                    <p>Register your income property for free and Homesuite will automatically notify your tenants when jobs are scheduled</p>
+                </div>
 
             </div>
 
         </div>
         <div class="large-12 columns b2">
             <div class="large-6 columns benefit">
-                <h5>UPFRONT PRICING</h5>
-<p>See what you are paying for before you book so you can increase that bottom line.</p>            </div>
-            <div class="large-6 columns benefit">
-                <h5>We are here to help</h5>
-                <p>Secure and cashless platform, 24/7 customer service, 100% money-back guarantee, FREE to sign up. </p>
+                <i class="fa fa-usd"></i>
+                <div class="large-10 right columns">
 
+                    <h5>UPFRONT PRICING</h5>
+                    <p>See what you are paying for before you book so you can increase that bottom line.</p>
+                </div>
+            </div>
+            <div class="large-6 columns benefit">
+                <i class="fa fa-thumbs-up"></i>
+
+                <div class="large-10 right columns">
+
+                    <h5>Easy and Effortless</h5>
+                    <p>Secure and cashless platform, 24/7 customer service, 100% money-back guarantee, FREE to sign up.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -311,9 +322,22 @@
     <footer class="othercontent">
         <div class="row">
             <div class="large-12 columns">
-                <p class=" rights text-center">© 2014 HomeSuite, All rights reserved.</p>
+
+
+                <div class="social large-6 columns ">
+                    <i class="fa fa-facebook-square fa-2x"></i>
+                    <i class="fa fa-google-plus-square fa-2x"></i>
+                    <i class="fa fa-twitter-square fa-2x"></i>
+                </div>
+                <div class="large-6 columns links">
+                    About/Process/Contact
+                </div>
+
+
             </div>
         </div>
+        <div class="large-12 text-center  trade">© 2014 HomeSuite, All rights reserved.</div>
+
     </footer>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/waypoints.min.js"></script>
