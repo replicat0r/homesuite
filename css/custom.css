@@ -43,6 +43,8 @@ a:hover {
 
 }
 
+/*
+
 .fs-form-wrap label:not(.multiple) {
 
     font-size: 2.2em;
@@ -50,10 +52,11 @@ a:hover {
     font-weight: 100;
 
 }
+*/
 
 header {
 
-    background: white;
+    background: rgba(255, 255, 255, 1);
 
     display: block;
 
@@ -87,40 +90,105 @@ header ul li {
 
 header a {
 
-
     text-align: center;
 
     line-height: 20px;
 
     display: block;
-    padding:8px 14px;
+
+    padding: 8px 14px;
 
     margin: 10px 3px;
 
 }
 
-header a:hover {
+header a::before,
 
-    color: red;
+header a::after {
+
+    display: inline-block;
+
+    opacity: 0;
+
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+
+    transition: transform 0.3s, opacity 0.2s;
 
 }
 
-.property button {
+header a::before {
+
+    margin-right: 10px;
+
+    content: '[';
+
+    -webkit-transform: translateX(20px);
+
+    -moz-transform: translateX(20px);
+
+    transform: translateX(20px);
+
+}
+
+header a::after {
+
+    margin-left: 10px;
+
+    content: ']';
+
+    -webkit-transform: translateX(-20px);
+
+    -moz-transform: translateX(-20px);
+
+    transform: translateX(-20px);
+
+}
+
+header a:hover::before,
+
+header a:hover::after,
+
+header a:focus::before,
+
+header a:focus::after,
+
+a.active {
+
+    opacity: 1;
+
+    -webkit-transform: translateX(0px);
+
+    -moz-transform: translateX(0px);
+
+    transform: translateX(0px);
+
+}
+
+.intro-content button,.custombtn {
 
     background: white;
+
+    margin-top: 2em;
+
+    transition: all 0.5s ease;
+
+    padding: 10px 40px;
+
+    font-size: 1em;
+
+}
+
+.property button,.custombtn {
 
     color: rgba(0, 168, 198, 1);
 
     border: 1px solid rgba(0, 168, 198, 1);
 
-    padding: 10px 25px;
-
-    margin-top: 2em;
-    transition: all 0.5s ease;
-
 }
 
-.property button:hover {
+.property button:hover,.custombtn:hover {
 
     border: 1px solid white;
 
@@ -130,10 +198,154 @@ header a:hover {
 
 }
 
+.serviceworker button {
+
+    color: rgba(64, 192, 203, 1);
+
+    border: 1px solid rgba(64, 192, 203, 1);
+
+}
+
+.serviceworker button:hover {
+
+    border: 1px solid white;
+
+    background: rgba(64, 192, 203, 1);
+
+    color: white;
+
+}
+
 .trade {
+
     position: relative;
-    background: gainsboro;
+
+    background: #f8f8f8;
+
     top: 0px;
+
     margin: 0;
-    padding: 25px;
+
+    padding: 25px 0 0;
+
+}
+
+.center-block-new {
+
+    display: block!important;
+
+    margin-left: auto!important;
+
+    margin-right: auto!important;
+
+    float: none;
+
+    margin: 20px auto;
+
+}
+
+.navbar-toggle {
+
+    margin-top: 18px;
+
+}
+
+.servicetabs #propertytab a,#fs-form-wrap-left .fs-submit {
+
+    background: rgba(0, 168, 198, 0.4);
+
+    color: white;
+
+    border: 1px solid rgba(0, 168, 198, 0.2);
+
+    transition: all 0.5s ease;
+
+}
+
+.servicetabs #propertytab a:hover,
+
+.servicetabs #propertytab.active>a,
+
+.servicetabs #propertytab.active>a:hover,
+
+.servicetabs #propertytab.active>a:focus {
+
+    background: rgba(0, 168, 198, 1);
+
+}
+
+.servicetabs #servicetab a {
+
+    background: rgba(64, 192, 203, 0.4);
+
+    color: white;
+
+    border: 1px solid rgba(64, 192, 203, 0.2);
+
+    transition: all 0.5s ease;
+
+}
+
+.servicetabs #servicetab a:hover,
+
+.servicetabs #servicetab.active>a,
+
+.servicetabs #servicetab.active>a:hover,
+
+.servicetabs #servicetab.active>a:focus {
+
+    background: rgba(64, 192, 203, 1);
+
+    color: white;
+
+}
+.process  {
+/*    background: #f8f8f8;*/
+/*    padding: 40px 0;*/
+    background: url(/img/blur1.jpg);
+}
+
+
+.process{
+    background: #f8f8f8;
+    outline: 1px solid whitesmoke;
+    padding: 00px 0;
+    height: 500px;
+    padding: 40px 0px;
+    
+}
+.newsletter:before {
+    content: "";
+     width: 100%;
+        height: 200px;
+    position: absolute;
+    display: block;
+    padding: 30px;
+            background: rgba(64, 192, 203, 0.8);
+
+ }
+
+.seperator{
+ margin: 80px auto;   
+    width: 70%;
+}
+
+.newsletter {
+    background-image: url(../img/inside.jpg);
+    background-position: center;
+    height: 200px;
+    margin-bottom: 0!important;
+}
+
+
+.newsletter h3{
+    color: white;
+ text-align: center;
+}
+
+.newsletter h3:first-child{
+ padding-top:40px;   
+}
+.contact {
+    height: 400px;
 }

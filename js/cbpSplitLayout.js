@@ -79,12 +79,13 @@
     }
 
     function reset() {
-        $('#header').fadeOut('600', function () {
-            classie.remove(splitlayout, 'close-right');
+         classie.remove(splitlayout, 'close-right');
             classie.remove(splitlayout, 'close-left');
             classie.remove(splitlayout, 'reset-layout');
+        $('header').fadeOut( function () {
+
             $('.othercontent').addClass('invis');
-            $('.page').fadeIn('fast');
+//            $('.page').fadeIn('fast');
 
         });
 
@@ -95,8 +96,8 @@
 
     function appear() {
         $('.othercontent').removeClass('invis');
-        $('#header').fadeIn('slow');
-        $('.page').fadeOut('1000');
+        $('header').fadeIn();
+//        $('.page').fadeOut('1000');
 
     }
 

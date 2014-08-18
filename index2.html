@@ -14,30 +14,32 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/form.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
-
     <link rel="stylesheet" type="text/css" href="css/component2.css" />
+
+    <link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     <script src="js/2modernizr.custom.js"></script>
     <style>
-        .othercontent {
+        .othercontent:not(footer):not(first-child):not(last-child) {
             display: block;
             width: 100%;
+            margin: 50px auto;
         }
         body {
-            overflow-y: visible;
+            /*            overflow-x: hidden;*/
         }
         .invis {
             display: none!important;
         }
-        .active {
-            background: green;
+        .b1{
+         margin-top:40px;   
         }
         .b1 .benefit:first-child {
             border-right: 1px solid whitesmoke;
@@ -52,30 +54,38 @@
             padding: 20px;
         }
         footer {
-            height: 100px;
+            height: 80px;
+            background: #f8f8f8;
         }
         footer .rights {
             border-top: 1px solid gainsboro;
             position: relative;
             display: block;
         }
-        input[type="checkbox"] {
+        .multiple input[type="checkbox"] {
             visibility: hidden;
             height: 0;
         }
         .multiple input[type="checkbox"] + label {
-            border: 1px solid white;
-            width: 25%;
+            border: 1px solid rgba(0, 168, 198, 0.5);
+            color: rgba(0, 168, 198, 1);
+            width: 45%;
             float: left;
-            padding: 30px 5px;
+            padding: 20px 5px;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 0.4em;
             margin: 10px;
             display: inline-block;
+            transition: background 0.3s ease;
         }
-        input[type="checkbox"]:checked + label {
+        .multiple input[type="checkbox"]:checked + label {
             color: white;
-            border: 1px solid white;
+            background: rgba(0, 168, 198, 0.8);
+        }
+        .multiple input[type="checkbox"] + label:hover {
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 168, 198, 0.5);
         }
         .property h6 span {
             background: white;
@@ -86,31 +96,92 @@
             text-transform: uppercase;
         }
         .about i {
+            margin-left: 20px;
             font-size: 50px;
             transform: translateY(50%);
+        }
+        .servicetabs li {
+            width: 50%;
+            text-align: center;
+            margin: 0;
+            border: none;
+        }
+        .process .nav-tabs {
+            border: none;
+            padding: 0;
+        }
+        .servicetabs li a {
+            background: red;
+            border-radius: 0;
+        }
+        /*
+         #bx-pager a:hover,
+  #bx-pager a.active {
+    border: solid #5280DD 1px;
+  }
+
+        .bx-wrapper .bx-viewport {
+-moz-box-shadow: none;
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ border:none;
+left: -5px;
+background: #fff;
+-webkit-transform: translatez(0);
+-moz-transform: translatez(0);
+-ms-transform: translatez(0);
+-o-transform: translatez(0);
+transform: translatez(0);
+*/
+        
+        .tab-pane ul li{
+        list-style: none;
+            display: block;
+        }
+        
+        footer .row i{
+        color:grey;
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
-    <header class="clearfix" class="top-bar" data-topbar id="header">
-        <ul class="large-6 right medium-7 columns ">
-
-            <li><a class="home" href="#">contact</a>
-            </li>
-            <li><a class="about" href="#">process</a>
-            </li>
-
-            <li><a class="process" href="#">about</a>
-            </li>
-            <li><a class="contact" href="#">home</a>
-            </li>
+    <header>
 
 
-        </ul>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HomeSuite</a>
+                </div>
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a>
+                        </li>
+
+                        <li><a href="#">About</a>
+                        </li>
+                        <li><a href="#">Process</a>
+                        </li>
+                        <li><a class="active" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
     </header>
 
-    <div class="container">
+    <div class="split-container">
         <div id="splitlayout" class="splitlayout">
             <div class="intro">
                 <div class="side side-left">
@@ -118,9 +189,9 @@
                     <div class="intro-content">
 
                         <div class="property">
-                            <h2>Property Owners</h2>
+                            <h1>Property Owners</h1>
                             <hr>
-                            <h6>Schedule professional handyman and service workers for your income property when you need them  <span>Anytime.Anywhere</span></h6>
+                            <h5>Schedule professional handyman and service workers for your income property when you need them  <span>Anytime.Anywhere</span></h5>
 
                             <button>Sign Up</button>
                         </div>
@@ -130,8 +201,10 @@
                 <div class="side side-right">
                     <div class="intro-content ">
                         <div class="serviceworker">
-                            <h2>Service Workers</h2>
-                            <h5>Find the Perfect Job</h5>
+                            <h1>Professional Workers</h1>
+                            <hr>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed nisl turpis. Etiam facilisis urna nec volutpat tempor. Proin dignissim felis non nisl .</h5>
+
                             <button>Sign Up</button>
 
                         </div>
@@ -145,22 +218,26 @@
 
                     <div class="fs-form-wrap" id="fs-form-wrap-right">
                         <div class="fs-title">
-                            <h1>Project Worksheet</h1>
+                            <h1>Signup</h1>
 
                         </div>
                         <form id="myform" class="fs-form fs-form-full" autocomplete="off">
                             <ol class="fs-fields">
                                 <li>
                                     <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
-                                    <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
+                                    <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="John Smith" required/>
                                 </li>
                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
-                                    <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
+                                    <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise!">What's your email address?</label>
+                                    <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="John@gmail.com" required/>
                                 </li>
-                                <li data-input-trigger>
-                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What kind of service do you provide?</label>
-                                    <div class="clearfix fs-anim-lower multiple large-90 columns">
+                                <li>
+                                    <label class="fs-field-label fs-anim-upper" for="q3" data-info="Easier for us to contact you">What's your phone number?</label>
+                                    <input class="fs-anim-lower" id="q2" name="q3" type="email" placeholder="647-232-1234" required/>
+                                </li>
+                                <li>
+                                    <label class="fs-field-label fs-anim-upper" for="q4" data-info="This will help us know what kind of service you need">What kind of service do you provide?</label>
+                                    <div class="clearfix fs-anim-lower multiple large-10 large-centered columns">
 
                                         <input type="checkbox" id="c1" name="cc" />
                                         <label for="c1">Cleaning</label>
@@ -185,12 +262,12 @@
                                 </li>
 
                                 <li>
-                                    <label class="fs-field-label fs-anim-upper" for="q4">Tell us a little about yourself</label>
-                                    <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+                                    <label class="fs-field-label fs-anim-upper" for="q6">Tell us a little about yourself</label>
+                                    <textarea class="fs-anim-lower" id="q6" name="q4" placeholder="Describe here"></textarea>
                                 </li>
                             </ol>
                             <!-- /fs-fields -->
-                            <button class="fs-submit" type="submit">Send answers</button>
+                            <button class="fs-submit" type="submit">Send!</button>
                         </form>
                         <!-- /fs-form -->
                     </div>
@@ -204,7 +281,7 @@
                 <div class="page-inner">
                     <div class="fs-form-wrap" id="fs-form-wrap-left">
                         <div class="fs-title">
-                            <h1 class="left">Sign-up with us</h1>
+                            <h1 class="pull-left">Sign Up With Us</h1>
 
                         </div>
                         <form id="myform" class="fs-form fs-form-full" autocomplete="off">
@@ -266,108 +343,190 @@
         <!-- /splitlayout -->
 
     </div>
-    <!-- /container -->
-    <div class="about othercontent row">
-        <h3 class="text-center">On Demand Real Estate Services for the Property Manager and Landlord</h3>
-        <h6 class="text-center">HomeSuite connect you with the right specialist for your property management needs</h6>
-        <div class="large-12 columns b1">
-            <div class="large-6 columns benefit">
-                <i class="fa fa-clock-o large-1"></i>
-                <div class="large-10 right columns">
-                    <h5> PRIORITY BOOKING</h5>
-                    <p>Homesuite qualified professionals are available on demand for emergency situations and for regular jobs.</p>
+    <!-- /split-container -->
+    <div class="about othercontent container">
+        <div class="col-lg-10 center-block-new">
+            <h3 class=" text-center col-md-9 col-lg-12 center-block  ">On Demand Real Estate Services for  Property Managers and Landlords</h3>
+
+            <hr class="col-lg-6 center-block-new">
+            <h5 class="text-center">HomeSuite connect you with the right specialist for your property management needs</h5>
+            <div class="col-md- b1">
+                <div class="col-md-6  benefit">
+                    <i class="fa fa-clock-o large-1"></i>
+                    <div class="col-md-10 pull-right ">
+                        <h5> PRIORITY BOOKING</h5>
+                        <p>Homesuite qualified professionals are available on demand for emergency situations and for regular jobs.</p>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6  benefit">
+                    <i class="fa fa-sitemap fa-rotate-90"></i>
+                    <div class="col-md-10 pull-right columns">
+
+                        <h5>FULLY INTEGRATED</h5>
+
+                        <p>Register your income property for free and Homesuite will automatically notify your tenants when jobs are scheduled</p>
+                    </div>
+
                 </div>
 
-
             </div>
-            <div class="large-6 columns benefit">
-                <i class="fa fa-sitemap fa-rotate-90"></i>
-                <div class="large-10 right columns">
+            <div class="large-12 columns b2">
+                <div class="col-md-6  benefit">
+                    <i class="fa fa-usd"></i>
+                    <div class="col-md-10 pull-right columns">
 
-                    <h5>FULLY INTEGRATED</h5>
-
-                    <p>Register your income property for free and Homesuite will automatically notify your tenants when jobs are scheduled</p>
+                        <h5>UPFRONT PRICING</h5>
+                        <p>See what you are paying for before you book so you can increase that bottom line.</p>
+                    </div>
                 </div>
+                <div class="col-md-6  benefit">
+                    <i class="fa fa-thumbs-up"></i>
 
-            </div>
+                    <div class="col-md-10 pull-right columns">
 
-        </div>
-        <div class="large-12 columns b2">
-            <div class="large-6 columns benefit">
-                <i class="fa fa-usd"></i>
-                <div class="large-10 right columns">
-
-                    <h5>UPFRONT PRICING</h5>
-                    <p>See what you are paying for before you book so you can increase that bottom line.</p>
-                </div>
-            </div>
-            <div class="large-6 columns benefit">
-                <i class="fa fa-thumbs-up"></i>
-
-                <div class="large-10 right columns">
-
-                    <h5>Easy and Effortless</h5>
-                    <p>Secure and cashless platform, 24/7 customer service, 100% money-back guarantee, FREE to sign up.</p>
+                        <h5>Easy and Effortless</h5>
+                        <p>Secure and cashless platform, 24/7 customer service, 100% money-back guarantee, FREE to sign up.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+<!--<hr class="seperator">-->
+    <div class=" process  othercontent">
+        <h3 class="text-center">Its Easy to use</h3>
 
-    <div class="process othercontent">
+
+        <div class="row">
+            <div class="col-lg-10 col-md-8 center-block-new">
+                <ul class="nav nav-tabs  col-lg-6 col-md-8 center-block-new servicetabs" role="tablist">
+                    <li id="propertytab" class="active"><a href="#property" role="tab" data-toggle="tab">Property Owners</a>
+                    </li>
+                    <li id="servicetab"><a href="#sworker" role="tab" data-toggle="tab">Service Workers</a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active " id="property">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <ul>
+                                <li><h5>Lorem Ipsum</h5>
+                                <p>consectetur adipiscing elit. Pellentesque quis vulputate mi, vitae elementum eros. Suspendisse vulputate feugiat sapien sed blandit. </p>
+                                </li>
+                                <li>Lorem Ipsum
+                                <p>rcu ultrices mattis. Integer viverra tortor eget arcu bibendum semper. Mauris ac lorem vitae nisi porta imperdiet. Nunc placerat lorem id lacus ornare fringilla. </p></li>
+
+                                <li>
+                                    <h5>Lorem Impsum</h5>
+                                    <p>Aliquam vitae molestie nulla, varius sodales tellus. Proin neque orci, pharetra id elit et, ultricies euismod felis. Integer nec dapibus neque. Suspendisse </p></li>
+
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <h3>Start Living easier</h3>
+                            <h4>Schedule professional handyman and service workers for your income property</h4>
+                        </div>
+
+
+
+                    </div>
+                    <div class="tab-pane " id="sworker">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <ul>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+
+                                <li>Lorem Ipsum</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tab panes -->
+
+
+
+
+        </div>
     </div>
     <div class="contact othercontent">
+        <h2 class="text-center"> Get In Touch With Us</h2>
+        <div class="col-md-8 center-block-new">
+        <form role="form">
+              <div class="form-group col-xs-6">
+    <label for="exampleInputPassword1">Name</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="John Smith">
+  </div>
+            
+  <div class="form-group col-xs-6">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
 
+              <div class="form-group col-xs-12">
+
+            <textarea class="form-control col-xs-12" rows="6"></textarea>
+</div>
+  <button type="submit" class="btn btn-info center-block-new">Submit</button>
+</form>
     </div>
-
-    <footer class="othercontent">
-        <div class="row">
-            <div class="large-12 columns">
-
-
-                <div class="social large-6 columns ">
-                    <i class="fa fa-facebook-square fa-2x"></i>
-                    <i class="fa fa-google-plus-square fa-2x"></i>
-                    <i class="fa fa-twitter-square fa-2x"></i>
-                </div>
-                <div class="large-6 columns links">
-                    About/Process/Contact
-                </div>
-
-
-            </div>
         </div>
-        <div class="large-12 text-center  trade">© 2014 HomeSuite, All rights reserved.</div>
+
+      <div class="newsletter othercontent ">
+          <div class="center-block-new col-md-7">
+<h3>Are you interested in becoming an early adopter?</h3>
+<h3>Fill out the form below and we’ll get in touch with you</h3>
+<a class="custombtn btn center-block-new  col-md-3" href="#">Keep Me Posted</a>
+          </div>
+          </div>
+    
+
+    <footer class="othercontent footer ">
+
+        <div class="large-12 text-center  trade">© 2014 HomeSuite, All rights reserved.<span class=" row"><i class="fa fa-facebook-square fa-2x"></i>
+                    <i class="fa fa-google-plus-square fa-2x"></i>
+                    <i class="fa fa-twitter-square fa-2x"></i></span>
+        </div>
+
 
     </footer>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/waypoints.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
     <script src="js/classie.js"></script>
     <script src="js/cbpSplitLayout.js"></script>
     <script src="js/fullscreenForm.js"></script>
     <script src="js/selectFx.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="bxslider/jquery.bxslider.min.js"></script>
+
 
     <script src="js/app.js"></script>
     <script>
-        $(document).ready(function () {
-            //        $('.contact').waypoint(function() {
-            //            $('header').find('a').removeClass('active');
-            //            $('header .contact').addClass('active');
-            //            });
-            //
-            //        $('.process').waypoint(function() {
-            //            $('header').find('a').removeClass('active');
-            //            $('header .process').addClass('active');
-            //        });
-            //          $('.about').waypoint(function() {
-            //            $('header').find('a').removeClass('active');
-            //            $('header .about').addClass('active');
-            //        });
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                adaptiveHeight: true,
+                mode: 'fade',
+                pagerCustom: '#bx-pager',
+                auto: true,
+                pause: 4000,
+                controls: false
 
+            });
         });
-
-        $(document).foundation();
     </script>
 </body>
 

@@ -4,12 +4,14 @@
     width: 100%;
     height: 100%;
     color: #fff;
-    margin: 0% auto;
+    margin: 0% auto ;
 /*
         background-image: url(../img/inside.jpg);
     background-size: contain;
 */
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
+    
+
     color: #fff;
     font-weight: 100;
     font-size: 1em;
@@ -19,6 +21,9 @@
 /*    min-height: 590px;*/
 
 
+}
+.fs-form-wrap *{
+ color:rgba(0,0,0,0.6);   
 }
 
 .overview .fs-form-wrap {
@@ -66,17 +71,17 @@
 }
 
 .fs-form-overview {
-    padding: 2.5em 30% 6em;
+    padding: 4.5em 10% 6em;
     width: 100%;
     height: 100%;
-    background: #fffed8;
+/*    background: #fffed8;*/
     color: #3b3f45;
     font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
     display: block;
-    margin-bottom: 2.5em;
+    margin-bottom: 0.5em;
     color: #3b3f45;
     content: 'Review & Submit';
     font-weight: 700;
@@ -184,8 +189,8 @@ button.fs-continue,
 
 .fs-form-overview .fs-fields > li,
 .no-js .fs-form .fs-fields > li {
-    margin: 1em 0 2em;
-    padding: 0 0 2em 0;
+    margin: 0;
+    padding: 0 0.5em;
 /*    border-bottom: 2px solid rgba(0,0,0,0.1);*/
 }
 
@@ -197,9 +202,10 @@ button.fs-continue,
 
 .fs-fields > li label.fs-field-label {
     display: inline-block;
-    padding: 0 5px 1em 0;
+    padding: 1em 5px 1em 0;
     font-weight: 100;
     pointer-events: none;
+    font-size: 0.8em;
 }
 
 .fs-form-full .fs-fields > li label[data-info]::after {
@@ -225,7 +231,7 @@ button.fs-continue,
 
 .fs-form-full .fs-fields > li label[data-info]::before {
     position: absolute;
-    bottom: 100%;
+    bottom: 80%;
        left: 0;
     padding: 0 0 10px;
     min-width: 200px;
@@ -263,15 +269,21 @@ button.fs-continue,
     border: none;
     border-bottom: 2px solid rgba(0,0,0,0.2);
     background-color: transparent;
-    color: #fffed8;
+    color: #333;
     text-overflow: ellipsis;
     font-weight: bold;
-    font-size: 1.5em;
+/*    font-size: 2em;*/
     border-radius: 0;
+    height: auto;
+    box-shadow:none;
 }
 
 .fs-fields input:invalid {
     box-shadow: none; /* removes red shadow in FF*/
+}
+
+.fs-fields input:focus{
+box-shadow: none;
 }
 
 .fs-form-overview .fs-fields input {
@@ -287,11 +299,12 @@ button.fs-continue,
 }
 
 .fs-fields input:focus {
-    background-color: #3b3f45; /* Fixes chrome bug with placeholder */
+    background-color: transparent; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input:focus {
-    background-color: #fffed8; /* Fixes chrome bug with placeholder */
+    background-color: transparent; /* Fixes chrome bug with placeholder */
+    border: 1px solid rgba(0,0,0,0.7);
 }
 
 .fs-form-overview .fs-fields input {
@@ -388,14 +401,14 @@ button.fs-continue,
 }
 
 .fs-fields textarea {
-    padding: 0.25em;
+    padding: 0.15em;
     width: 100%;
     height: 200px;
     border: 2px solid rgba(0,0,0,0.2);
     background-color: transparent;
-    color: #fffed8;
+    color: #333;
     font-weight: 700;
-    font-size: 0.85em;
+    font-size: 0.55em;
     resize: none;
 }
 
@@ -414,7 +427,8 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-    background: #fffed8;
+/*    background: #fffed8;*/
+    border: 1px solid rgba(0,0,0,0.6);
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -434,15 +448,15 @@ button.fs-continue,
 }
 
 .fs-fields input.fs-mark {
-    padding-left: 1em;
-    background-image: url(../img/dollar.svg);
+/*    padding-left: 1em;*/
+/*    background-image: url(../img/dollar.svg);*/
     background-position: 0% 0.15em;
     background-size: auto 75%;
     background-repeat: no-repeat;
 }
 
 .fs-fields input.fs-mark[required] {
-    background-image: url(../img/dollar.svg), url(../img/abacusstar.svg);
+/*    background-image: url(../img/dollar.svg), url(../img/abacusstar.svg);*/
     background-position: 0% 0.15em, top right;
     background-size: auto 75%, 18px;
     background-repeat: no-repeat;
@@ -525,7 +539,7 @@ button.fs-continue,
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-    background: #fffed8;
+    background: rgba(0, 168, 198, 1);
 }
 
 /* Progress bar */
@@ -534,7 +548,7 @@ button.fs-continue,
     top: 0;
     width: 0%;
     height: 0.5em;
-    background: #fffed8;
+    background:rgba(0, 168, 198, 0.6) ;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
 }
@@ -548,9 +562,9 @@ button.fs-continue,
     color: rgba(0,0,0,0.4);
     margin: 40px;
     width: 2em;
-    font-weight: 700;
-    font-size: 2em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     cursor: default;
 }
 
@@ -644,8 +658,7 @@ button.fs-continue,
 button.fs-submit,
 button.fs-continue {
     padding: 0.6em 1.5em;
-    border: 3px solid #232529;
-    border-radius: 40px;
+    border: 1px solid #232529;
     font-weight: 700;
     color: rgba(0,0,0,0.4);
 }
@@ -667,12 +680,13 @@ button.fs-continue {
     bottom: 0;
     margin: 0 40px 60px 0;
     font-size: 1.25em;
+    transition: background 0.3s ease;
 }
 
 button.fs-submit:hover,
 button.fs-submit:focus,
 button.fs-continue:hover {
-    background: #232529;
+    background: rgba(0,0,0,0.6);
     color: #fff;
 }
 
@@ -693,7 +707,7 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
     position: absolute;
-    bottom: 75%;
+    bottom: 70%;
     left: 50%;
     z-index: 800;
     max-width: 960px;
@@ -702,8 +716,10 @@ button.fs-continue:hover {
     font-weight: 700;
     font-size: 1em;
     opacity: 0;
+    text-align: center;
     -webkit-transform: translate3d(-50%,-5px,0);
     transform: translate3d(-50%,-5px,0);
+    background: transparent;
 }
 
 .fs-message-error.fs-show {
