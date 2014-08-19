@@ -2,6 +2,7 @@
 body * {
 
     font-family: 'Open Sans', sans-serif;
+    font-weight: 100!important;
 
 }
 
@@ -154,7 +155,7 @@ header a:focus::before,
 
 header a:focus::after,
 
-a.active {
+a.active::before,a.active::after {
 
     opacity: 1;
 
@@ -302,12 +303,12 @@ a.active {
 .process  {
 /*    background: #f8f8f8;*/
 /*    padding: 40px 0;*/
-    background: url(/img/blur1.jpg);
+/*    background: url(/img/blur1.jpg);*/
 }
 
 
 .process{
-    background: #f8f8f8;
+    background: #fff;
     outline: 1px solid whitesmoke;
     padding: 00px 0;
     height: 500px;
@@ -348,4 +349,8 @@ a.active {
 }
 .contact {
     height: 400px;
+}
+
+..modal-header{
+ border-bottom: 0!important;   
 }
