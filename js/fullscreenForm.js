@@ -229,7 +229,9 @@
 		if( this.isLastStep || !this._validade() || this.isAnimating ) {
 			return false;
 		}
-		this.isAnimating = true;
+        this.focus();
+
+        this.isAnimating = true;
 
 		// check if on last step
 		this.isLastStep = this.current === this.fieldsCount - 1 && backto === undefined ? true : false;

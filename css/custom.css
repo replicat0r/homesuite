@@ -147,6 +147,11 @@ header a::after {
 
 }
 
+.navbar-nav>.active>a{
+ background: transparent!important;   
+}
+
+
 header a:hover::before,
 
 header a:hover::after,
@@ -155,7 +160,12 @@ header a:focus::before,
 
 header a:focus::after,
 
-a.active::before,a.active::after {
+a.active::before,a.active::after,
+.navbar-nav>.active>a::before,
+.navbar-nav>.active>a::after
+
+
+{
 
     opacity: 1;
 
@@ -171,13 +181,14 @@ a.active::before,a.active::after {
 
     background: white;
 
-    margin-top: 2em;
+    margin: 1em 3em 0;
 
     transition: all 0.5s ease;
 
     padding: 10px 40px;
 
     font-size: 1em;
+    width: 40%;
 
 }
 
@@ -300,19 +311,14 @@ a.active::before,a.active::after {
     color: white;
 
 }
-.process  {
-/*    background: #f8f8f8;*/
-/*    padding: 40px 0;*/
-/*    background: url(/img/blur1.jpg);*/
-}
+
 
 
 .process{
     background: #fff;
-    outline: 1px solid whitesmoke;
-    padding: 00px 0;
+/*    outline: 1px solid whitesmoke;*/
     height: 500px;
-    padding: 40px 0px;
+    padding: 10px 0px 40px;
     
 }
 .newsletter:before {
@@ -327,8 +333,9 @@ a.active::before,a.active::after {
  }
 
 .seperator{
- margin: 80px auto;   
-    width: 70%;
+ margin: 80px auto 20px;   
+    border-top:1px solid grey;
+    width: 40%;
 }
 
 .newsletter {
@@ -351,6 +358,19 @@ a.active::before,a.active::after {
     height: 400px;
 }
 
-..modal-header{
- border-bottom: 0!important;   
+.modal-header{
+ border-bottom: none!important;   
+}
+
+.modal-content{
+border-radius: 0;
+}
+
+.about h3{
+ line-height: 2;   
+
+}
+
+.othercontent *{
+    color: grey
 }
